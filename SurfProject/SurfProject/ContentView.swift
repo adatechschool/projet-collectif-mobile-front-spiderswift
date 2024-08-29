@@ -6,56 +6,44 @@
 //
 
 import SwiftUI
-import SwiftData
 
-struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-
+struct ContentView : View {
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
+        
+        VStack {
+            ZStack(alignment: .topLeading) {
+                Image("spiderSurfing2")
+                    .resizable(resizingMode: .tile)
+                
+                VStack(alignment: .leading) {
+                    Text("Spider Surf")
+                        .font(.title)
+                        .foregroundColor(Color.red)
+                        .multilineTextAlignment(.leading)
+                        .bold()
+                    Spacer() // Ajoute de l'espace pour pousser le texte en haut
                 }
-                .onDelete(perform: deleteItems)
+                .padding() // Optionnel : ajouter de l'espace autour du texte
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
+            
+            HStack{
+                Image(systemName: "compass.drawing")
+                    .foregroundColor(Color.blue)
+                    .imageScale(.large)
+                    .padding(.trailing, 60.0)
+                Image(systemName: "location")
+                    .foregroundColor(.blue)
+                    .imageScale(.large)
+                    .padding(.trailing, 60.0)
+                Image(systemName: "figure.surfing")
+                    .foregroundColor(.blue)
+                    .imageScale(.large)
             }
-        } detail: {
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
+            .padding(.vertical, 2.0)
         }
     }
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
 }
