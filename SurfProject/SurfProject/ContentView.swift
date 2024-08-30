@@ -7,7 +7,6 @@
 
 import SwiftUI
 import MapKit
-import CoreLocationUI
 
 struct ContentView: View {
     @State private var cameraPosition: MapCameraPosition = .region(MKCoordinateRegion(
