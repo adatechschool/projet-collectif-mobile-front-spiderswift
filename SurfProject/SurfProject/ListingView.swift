@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ListingView: View {
-    let listeSpots = [
+    let listSpots = [
         Spot(
             name: "Audierne",
             imageName: "audierne",
@@ -127,21 +127,30 @@ struct ListingView: View {
             description: "La Torche est l'un des spots de surf les plus populaires en Bretagne, offrant des vagues pour tous les niveaux et un paysage spectaculaire."
         )
     ]
+    
     var body: some View {
-        List (listeSpots, id: \.name) {
-            Spot in
-            HStack {
-                Image(Spot.imageName)
-                    .resizable()
-                    .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                    .frame(width: 70, height:70)
-                    .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-                Text(Spot.name)
+        NavigationSplitView {
+            List(listSpots, id: \.name) {
+                Spot in
+                NavigationLink {
+                    ContentView()
+                } label: {
+                HStack {
+                    Image(Spot.imageName)
+                        .resizable()
+                        .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                        .frame(width: 70, height:70)
+                        .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                    Text(Spot.name)
+                }
             }
         }
+    } detail: {
+        Text("Sélectionnez un spot de surf de la liste pour en savoir plus")
     }
+}
 }
 
 #Preview {
-    ListingView()
+ListingView()
 }
