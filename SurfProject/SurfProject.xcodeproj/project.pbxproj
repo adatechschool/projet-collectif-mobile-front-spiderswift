@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BEC691B52C81C49200E0B055 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC691B42C81C49200E0B055 /* Model.swift */; };
+		BEC691B72C81D00E00E0B055 /* ListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC691B62C81D00E00E0B055 /* ListingView.swift */; };
 		E6ED1C632C7C775300678102 /* SurfProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6ED1C622C7C775300678102 /* SurfProjectApp.swift */; };
 		E6ED1C652C7C775300678102 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6ED1C642C7C775300678102 /* ContentView.swift */; };
 		E6ED1C672C7C775300678102 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6ED1C662C7C775300678102 /* Item.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BEC691B42C81C49200E0B055 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		BEC691B62C81D00E00E0B055 /* ListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingView.swift; sourceTree = "<group>"; };
 		E6ED1C5F2C7C775300678102 /* SurfProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurfProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6ED1C622C7C775300678102 /* SurfProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfProjectApp.swift; sourceTree = "<group>"; };
 		E6ED1C642C7C775300678102 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 				E6ED1C662C7C775300678102 /* Item.swift */,
 				E6ED1C682C7C775700678102 /* Assets.xcassets */,
 				E6ED1C6A2C7C775700678102 /* Preview Content */,
+				BEC691B42C81C49200E0B055 /* Model.swift */,
+				BEC691B62C81D00E00E0B055 /* ListingView.swift */,
 			);
 			path = SurfProject;
 			sourceTree = "<group>";
@@ -261,8 +267,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6ED1C652C7C775300678102 /* ContentView.swift in Sources */,
+				BEC691B72C81D00E00E0B055 /* ListingView.swift in Sources */,
 				E6ED1C672C7C775300678102 /* Item.swift in Sources */,
 				E6ED1C632C7C775300678102 /* SurfProjectApp.swift in Sources */,
+				BEC691B52C81C49200E0B055 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

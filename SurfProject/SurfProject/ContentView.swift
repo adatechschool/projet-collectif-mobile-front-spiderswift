@@ -14,13 +14,15 @@ struct ContentView : View {
             ZStack(alignment: .topLeading) {
                 Image("spiderSurfing2")
                     .resizable(resizingMode: .tile)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width:400)
                 
                 VStack(alignment: .leading) {
                     Text("Spider Surf")
                         .font(.title)
+                        .bold()
                         .foregroundColor(Color.red)
                         .multilineTextAlignment(.leading)
-                        .bold()
                     Spacer() // Ajoute de l'espace pour pousser le texte en haut
                 }
                 .padding() // Optionnel : ajouter de l'espace autour du texte
@@ -39,7 +41,7 @@ struct ContentView : View {
                     .foregroundColor(.blue)
                     .imageScale(.large)
             }
-            .padding(.vertical, 2.0)
+            .padding()
         }
     }
 }
