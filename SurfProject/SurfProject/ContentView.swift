@@ -8,6 +8,19 @@
 import SwiftUI
 
 struct ContentView : View {
+    
+    func autourDeMoi() {
+          print("Autour de moi")
+      }
+      
+    func lieux() {
+          print("Saint Brévin les Pins")
+      }
+      
+    func menu() {
+          print("Aloha")
+      }
+    
     var body: some View {
         
         VStack {
@@ -28,20 +41,36 @@ struct ContentView : View {
                 .padding() // Optionnel : ajouter de l'espace autour du texte
             }
             
-            HStack{
-                Image(systemName: "compass.drawing")
-                    .foregroundColor(Color.blue)
-                    .imageScale(.large)
-                    .padding(.trailing, 60.0)
-                Image(systemName: "location")
-                    .foregroundColor(.blue)
-                    .imageScale(.large)
-                    .padding(.trailing, 60.0)
-                Image(systemName: "figure.surfing")
-                    .foregroundColor(.blue)
-                    .imageScale(.large)
+        }
+        
+        HStack {
+            VStack(spacing:10) {
+                Button(action: {autourDeMoi()}){
+                    Image(systemName: "compass.drawing")
+                        .foregroundColor(Color.orange)
+                    Text("Autour de moi")
+                }
+                
+                .buttonStyle(BorderedProminentButtonStyle())
+            }
+            
+            VStack(spacing:10){
+                Button(action: {lieux()}){
+                    Image(systemName: "figure.surfing")
+                        .foregroundColor(Color.orange)
+                    Text("Autour d'un lieu")
+                }
+                .buttonStyle(BorderedProminentButtonStyle())
             }
             .padding()
+            VStack(spacing:10){
+                Button(action: {menu()}){
+                    Image(systemName: "list.star")
+                        .foregroundColor(Color.orange)
+                    Text("Menu")
+                }
+                .buttonStyle(BorderedProminentButtonStyle())
+            }
         }
     }
 }
