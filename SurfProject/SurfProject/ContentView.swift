@@ -6,34 +6,35 @@
 //
 
 import SwiftUI
+import MapKit
+import CoreLocationUI
 
 struct ContentView: View {
+    @State private var cameraPosition: MapCameraPosition = .region(MKCoordinateRegion(
+        center: CLLocationCoordinate2D(latitude: 46.496687, longitude: -1.784134),
+        span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+    ))
+    
     var body: some View {
-        ZStack {
-            Image("1989430")
-                .resizable()
-                .scaledToFill()
-            
-            VStack {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundStyle(Color.green)
-                Text("Hello, GreenWorld !")
-                    .foregroundColor(Color.green)
-                HStack {
-                    Image(systemName: "figure.surfing")
-                        .padding(5.0)
-                        .imageScale(.large)
-                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                    Text("SpiderSurf Open !")
-                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                }
+        Map {
+            Marker("Les Sables d'Olonne", coordinate: CLLocationCoordinate2D(latitude: 46.496687, longitude: -1.784134)).tint(.blue)
+        }
+    
+    
+            ZStack {
                 Rectangle()
                     .frame(width: 1000, height: 80)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.blue)
+                HStack {
+                    Image(systemName: "figure.surfing")
+                        .imageScale(.large)
+                        .foregroundColor(.white)
+                    Text("SpiderSurf Open !")
+                        .foregroundColor(.white)
+                }
             }
         }
-    }
+    
 }
 
 #Preview {
