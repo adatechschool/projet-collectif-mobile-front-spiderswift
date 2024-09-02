@@ -48,7 +48,7 @@ struct ContentView : View {
             
             //Creation buttons
             
-            HStack {
+            HStack(spacing:2){
                 VStack(spacing:4) {
                     
                     Button(action: {autourDeMoi()}){
