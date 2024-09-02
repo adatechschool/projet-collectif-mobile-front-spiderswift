@@ -44,32 +44,50 @@ struct ContentView : View {
         }
         
         HStack {
+           
             VStack(spacing:10) {
-                Button(action: {autourDeMoi()}){
-                    Image(systemName: "compass.drawing")
-                        .foregroundColor(Color.orange)
-                    Text("Autour de moi")
-                }
                 
-                .buttonStyle(BorderedProminentButtonStyle())
+                Button(action: {autourDeMoi()}){
+                   
+                    Image(systemName: "compass.drawing")
+                        .foregroundColor(Color.yellow)
+                    Text("Autour de moi")
+                        .foregroundColor(Color.black)
+                }
+                .padding()
+                .background(LinearGradient(gradient: Gradient(colors:[Color.red,Color.blue]), startPoint: .leading, endPoint: .trailing))
+                .cornerRadius(60.0)
+                //.buttonStyle(BorderedProminentButtonStyle())
             }
             
             VStack(spacing:10){
+                
                 Button(action: {lieux()}){
                     Image(systemName: "figure.surfing")
-                        .foregroundColor(Color.orange)
+                        .foregroundColor(Color.yellow)
                     Text("Autour d'un lieu")
+                        .foregroundColor(Color.black)
                 }
-                .buttonStyle(BorderedProminentButtonStyle())
+                .padding()
+                .background(LinearGradient(gradient: Gradient(colors:[Color.red,Color.blue]), startPoint: .leading, endPoint: .trailing))
+                .cornerRadius(60.0)
+                //.buttonStyle(BorderedProminentButtonStyle())
             }
             .padding()
             VStack(spacing:10){
+                
                 Button(action: {menu()}){
+                    
                     Image(systemName: "list.star")
-                        .foregroundColor(Color.orange)
+                        .foregroundColor(Color.yellow)
+                        
                     Text("Menu")
+                        .foregroundColor(Color.black)
                 }
-                .buttonStyle(BorderedProminentButtonStyle())
+                .padding()
+                .background(LinearGradient(gradient: Gradient(colors:[Color.red,Color.blue]), startPoint: .leading, endPoint: .trailing))
+                .cornerRadius(60.0)
+                //.buttonStyle(BorderedProminentButtonStyle())
             }
         }
     }
