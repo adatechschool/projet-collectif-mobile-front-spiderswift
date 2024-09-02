@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct SpotDetailsView: View {
+    
+    let spot: Spot
+    
     var body: some View {
 <<<<<<< HEAD
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
@@ -15,18 +18,21 @@ struct SpotDetailsView: View {
         
     GeometryReader { geometry in
         VStack {
-            Image("audierne")
+            Image(spot.imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: geometry.size.width)
             
             HStack{
                 Image(systemName: "mappin.and.ellipse")
-                Text("Nom du Spot : ")
-                Text("Audierne")
+                    .padding(.trailing, 2.0)
+                Text(spot.name)
             }
             .font(.title)
             .padding()
+            
+            Text(spot.description)
+                .padding()
             
             VStack(alignment: .leading){
                 
@@ -37,33 +43,44 @@ struct SpotDetailsView: View {
                 HStack{
                     Image(systemName: "cloud.sun")
                     Text("Météo : ")
-                    Text("Ensoleillée  |  28°C")
+                    //Text("Ensoleillée  |  28°C")
+                    ForEach(spot.weather, id: \.self) { weather in
+                        Text(weather)
+                    }
                 }
                     .padding()
                 
                 HStack{
                     Image(systemName: "moon.haze")
                     Text("Marée : ")
-                    Text("Basse 5h03  |  Pleine 12h01")
+                    ForEach(spot.tide, id: \.self) {
+                        tide in
+                        Text(tide)
+                    }
                 }
                     .padding()
                 
                 HStack{
                     Image(systemName: "water.waves")
                     Text("Houle : ")
-                    Text("2,34 m")
+                    Text(spot.swellSea)
                 }
                     .padding()
                 
                 HStack{
                     Image(systemName: "wind")
                     Text("Vent : ")
-                    Text("Vitesse 15km/h  |  Direction NO")
+                    ForEach(spot.wind, id: \.self) {
+                        wind in
+                        Text(wind)
+                    }
                 }
                     .padding()
             }
             .padding(.vertical, 15.0)
-            .background(RoundedRectangle(cornerRadius: 10).fill(.beige))
+            .background(RoundedRectangle(cornerRadius: 10).fill(.beige)
+                .stroke(.black, lineWidth: 2))
+
             }
         }
 >>>>>>> f891b69 (SpotDetailsView V2)
@@ -71,5 +88,5 @@ struct SpotDetailsView: View {
 }
 
 #Preview {
-    SpotDetailsView()
+    SpotDetailsView(spot: Spot(name: "Audierne", imageName: "audierne", weather: ["Ensoleillé", "17°C"], tide: ["Basse 5h03", "Haute 12H01"], swellSea: "1m-2m", wind: ["Nord-Ouest 15 km/h", "Ouest 10 km/h"], description: "Audierne est un spot idéal pour les surfeurs de tous niveaux, avec des vagues régulières et une belle plage."))
 }
