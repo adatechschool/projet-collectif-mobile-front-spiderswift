@@ -12,9 +12,6 @@ struct SpotDetailsView: View {
     let spot: Spot
     
     var body: some View {
-<<<<<<< HEAD
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-=======
         
     GeometryReader { geometry in
         VStack {
@@ -83,7 +80,6 @@ struct SpotDetailsView: View {
 
             }
         }
->>>>>>> f891b69 (SpotDetailsView V2)
     }
 }
 
