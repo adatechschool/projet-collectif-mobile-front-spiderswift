@@ -54,11 +54,15 @@ struct ContentView : View {
                     Text("Autour de moi")
                         .foregroundColor(Color.black)
                 }
+                
                 .padding()
                 .background(LinearGradient(gradient: Gradient(colors:[Color.red,Color.blue]), startPoint: .leading, endPoint: .trailing))
                 .cornerRadius(60.0)
+                .shadow(color: .gray, radius: 20.0, x: 20.0, y: 10.0)
+                
                 //.buttonStyle(BorderedProminentButtonStyle())
             }
+            
             
             VStack(spacing:10){
                 
@@ -71,6 +75,7 @@ struct ContentView : View {
                 .padding()
                 .background(LinearGradient(gradient: Gradient(colors:[Color.red,Color.blue]), startPoint: .leading, endPoint: .trailing))
                 .cornerRadius(60.0)
+                .shadow(color: .gray, radius: 20.0, x: 20.0, y: 10.0)
                 //.buttonStyle(BorderedProminentButtonStyle())
             }
             .padding()
@@ -87,6 +92,7 @@ struct ContentView : View {
                 .padding()
                 .background(LinearGradient(gradient: Gradient(colors:[Color.red,Color.blue]), startPoint: .leading, endPoint: .trailing))
                 .cornerRadius(60.0)
+                .shadow(color: .gray, radius: 20.0, x: 20.0, y: 10.0)
                 //.buttonStyle(BorderedProminentButtonStyle())
             }
         }
