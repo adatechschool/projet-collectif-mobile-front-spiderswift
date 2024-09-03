@@ -15,7 +15,6 @@
 		E68323B72C860060003C66E8 /* SurfSpotIView_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68323B62C860060003C66E8 /* SurfSpotIView_Model.swift */; };
 		E68323B92C860399003C66E8 /* MapModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68323B82C860399003C66E8 /* MapModelView.swift */; };
 		E6ED1C632C7C775300678102 /* SurfProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6ED1C622C7C775300678102 /* SurfProjectApp.swift */; };
-		E6ED1C672C7C775300678102 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6ED1C662C7C775300678102 /* Item.swift */; };
 		E6ED1C692C7C775700678102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6ED1C682C7C775700678102 /* Assets.xcassets */; };
 		E6ED1C6C2C7C775700678102 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6ED1C6B2C7C775700678102 /* Preview Assets.xcassets */; };
 		E6ED1C762C7C775800678102 /* SurfProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6ED1C752C7C775800678102 /* SurfProjectTests.swift */; };
@@ -50,7 +49,6 @@
 		E68323B82C860399003C66E8 /* MapModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModelView.swift; sourceTree = "<group>"; };
 		E6ED1C5F2C7C775300678102 /* SurfProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurfProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6ED1C622C7C775300678102 /* SurfProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfProjectApp.swift; sourceTree = "<group>"; };
-		E6ED1C662C7C775300678102 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		E6ED1C682C7C775700678102 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6ED1C6B2C7C775700678102 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E6ED1C712C7C775800678102 /* SurfProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurfProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,7 +123,6 @@
 				E68323B62C860060003C66E8 /* SurfSpotIView_Model.swift */,
 				E68323B82C860399003C66E8 /* MapModelView.swift */,
 				E68323B42C85FC62003C66E8 /* SurfSpotLocation_Model.swift */,
-				E6ED1C662C7C775300678102 /* Item.swift */,
 				E6ED1C682C7C775700678102 /* Assets.xcassets */,
 				E6ED1C6A2C7C775700678102 /* Preview Content */,
 				E61FDE662C820F570007CC23 /* Property List.plist */,
@@ -289,7 +286,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6ED1C672C7C775300678102 /* Item.swift in Sources */,
 				E61FDE692C820FB40007CC23 /* MapView.swift in Sources */,
 				E68323B52C85FC62003C66E8 /* SurfSpotLocation_Model.swift in Sources */,
 				E6ED1C632C7C775300678102 /* SurfProjectApp.swift in Sources */,

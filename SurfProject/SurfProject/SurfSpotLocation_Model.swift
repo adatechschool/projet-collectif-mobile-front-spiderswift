@@ -7,11 +7,11 @@
 
 import Foundation
 
-public struct ViewModel_SurfSpot: Identifiable, Codable {
-    public let id = UUID()
+struct SurfSpot: Identifiable, Codable {
+    var id = UUID()
     
     let name: String
-    let latitude: Float
-    let longitude: Float
-    
+    let latitude: Double //Double : plus grand que Float
+    let longitude: Double
+    let risk: String
 }

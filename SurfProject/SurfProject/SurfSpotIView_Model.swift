@@ -7,12 +7,24 @@
 
 import SwiftUI
 
-struct SurfSpotIView_Model: View {
+struct SurfSpotIViewList: View {
+    var SurfSpotArr:[SurfSpot] = [
+    SurfSpot(name: "Saint Jean de Monts", latitude: 46.787306, longitude: -2.071404, risk: "OK"),
+    SurfSpot(name: "Les Sables d'Olonne", latitude: 46.496687, longitude: -1.784134, risk: "Medium"),
+    SurfSpot(name: "Pornic", latitude: 47.115907, longitude: -2.102595, risk: "Dangerous"),
+    SurfSpot(name: "Saint Gilles Croix de Vie", latitude: 46.688300, longitude: -1.938300, risk: "OK"),
+    SurfSpot(name: "Saint Brevin les Pins", latitude: 47.247541, longitude: -2.168448, risk: "Dangerous")
+    ]
+    
     var body: some View {
-        var SpotSurfArr:[String] = []
+        Text("SurfSpot")
+        
+        ForEach(SurfSpotArr) { spot in
+            /*@START_MENU_TOKEN@*/Text(spot.name)/*@END_MENU_TOKEN@*/
+        }
     }
 }
 
-#Preview {
-    SurfSpotIView_Model()
-}
+//#Preview {
+//    SurfSpotIViewList()
+//}
