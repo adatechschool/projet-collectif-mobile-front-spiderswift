@@ -14,7 +14,17 @@ struct ListingJsonView: View {
     var body: some View {
         List(modelJsons.records, id: \.address) {
             spot in
-            Text(spot.surfBreak)
+
+            HStack {
+                AsyncImage(url: URL(string: spot.photos)) {
+                    image in image.image?
+                        .resizable()
+                        .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                        .frame(width: 70, height:70)
+                        .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                }
+                    Text(spot.surfBreak)
+            }
         }
     }
 }
