@@ -13,71 +13,71 @@ struct SpotDetailsView: View {
     
     var body: some View {
         
-    GeometryReader { geometry in
-        VStack {
-            Image(spot.imageName)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: geometry.size.width)
-            
-            HStack{
-                Image(systemName: "mappin.and.ellipse")
-                    .padding(.trailing, 2.0)
-                Text(spot.name)
-            }
-            .font(.title)
-            .padding()
-            
-            Text(spot.description)
+        GeometryReader { geometry in
+            VStack {
+                Image(spot.imageName)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: geometry.size.width)
+                
+                HStack{
+                    Image(systemName: "mappin.and.ellipse")
+                        .padding(.trailing, 2.0)
+                    Text(spot.name)
+                }
+                .font(.title)
                 .padding()
-            
-            VStack(alignment: .leading){
                 
-                Text("Conditions de Surf aujourd'hui :")
+                Text(spot.description)
                     .padding()
-                    .bold()
                 
-                HStack{
-                    Image(systemName: "cloud.sun")
-                    Text("Météo : ")
-                    //Text("Ensoleillée  |  28°C")
-                    ForEach(spot.weather, id: \.self) { weather in
-                        Text(weather)
+                VStack(alignment: .leading){
+                    
+                    Text("Conditions de Surf aujourd'hui :")
+                        .padding()
+                        .bold()
+                    
+                    HStack{
+                        Image(systemName: "cloud.sun")
+                        Text("Météo : ")
+                        //Text("Ensoleillée  |  28°C")
+                        ForEach(spot.weather, id: \.self) { weather in
+                            Text(weather)
+                        }
                     }
-                }
                     .padding()
-                
-                HStack{
-                    Image(systemName: "moon.haze")
-                    Text("Marée : ")
-                    ForEach(spot.tide, id: \.self) {
-                        tide in
-                        Text(tide)
+                    
+                    HStack{
+                        Image(systemName: "moon.haze")
+                        Text("Marée : ")
+                        ForEach(spot.tide, id: \.self) {
+                            tide in
+                            Text(tide)
+                        }
                     }
-                }
                     .padding()
-                
-                HStack{
-                    Image(systemName: "water.waves")
-                    Text("Houle : ")
-                    Text(spot.swellSea)
-                }
-                    .padding()
-                
-                HStack{
-                    Image(systemName: "wind")
-                    Text("Vent : ")
-                    ForEach(spot.wind, id: \.self) {
-                        wind in
-                        Text(wind)
+                    
+                    HStack{
+                        Image(systemName: "water.waves")
+                        Text("Houle : ")
+                        Text(spot.swellSea)
                     }
-                }
                     .padding()
-            }
-            .padding(.vertical, 15.0)
-            .background(RoundedRectangle(cornerRadius: 10).fill(.beige)
-                .stroke(.black, lineWidth: 2))
-
+                    
+                    HStack{
+                        Image(systemName: "wind")
+                        Text("Vent : ")
+                        ForEach(spot.wind, id: \.self) {
+                            wind in
+                            Text(wind)
+                        }
+                    }
+                    .padding()
+                }
+                .padding(.vertical, 15.0)
+                .background(RoundedRectangle(cornerRadius: 10).fill(.beige)
+                    .stroke(.black, lineWidth: 2))
+                
             }
         }
     }
