@@ -1,6 +1,7 @@
 # Apple
 .DS_Store
 /SurfProject/.DS_Store
+/SurfProject/SurfProject/.DS_Store
 
 # XCode env
-/SurfProject/SurfProject.xcodeproj/
+/SurfProject/SurfProject.xcodeproj
