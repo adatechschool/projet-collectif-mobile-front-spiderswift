@@ -5,7 +5,11 @@
       "scale" : "1x"
     },
     {
+<<<<<<< HEAD
       "filename" : "spidermanSurfingios.png",
+=======
+      "filename" : "spidermanSurfing.png",
+>>>>>>> 59d6c0f (rebase continue)
       "idiom" : "universal",
       "scale" : "2x"
     },
