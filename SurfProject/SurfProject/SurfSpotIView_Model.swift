@@ -20,11 +20,11 @@ struct SurfSpotIViewList: View {
         Text("SurfSpot")
         
         ForEach(SurfSpotArr) { spot in
-            /*@START_MENU_TOKEN@*/Text(spot.name)/*@END_MENU_TOKEN@*/
+            Text(spot.name)
         }
     }
 }
 
-//#Preview {
-//    SurfSpotIViewList()
-//}
+#Preview {
+    SurfSpotIViewList()
+}

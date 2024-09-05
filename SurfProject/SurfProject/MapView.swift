@@ -20,7 +20,9 @@ struct MapView: View {
     var body: some View {
         Map(position: $cameraPosition) {
             ForEach(Surf_Spot.SurfSpotArr, id: \.id) { SurfSpot in
-                Marker(SurfSpot.name, coordinate: CLLocationCoordinate2D(latitude: SurfSpot.latitude, longitude: SurfSpot.longitude))
+                Annotation(SurfSpot.name, coordinate: CLLocationCoordinate2D(latitude: SurfSpot.latitude, longitude: SurfSpot.longitude)) {
+                    PinModelView(risk: SurfSpot.risk)
+                }
             }
         }
         .onAppear(perform: {
