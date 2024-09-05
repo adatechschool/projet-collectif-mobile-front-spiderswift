@@ -10,7 +10,7 @@ import Foundation
 func makeAPICall(url: URL, token: String, completion: @escaping (Result<Data, Error>) -> Void) {
     var request = URLRequest(url: url)
     request.httpMethod = "GET"
-    request.setValue("Bearer patRBBxmyGCkyUwwN.82110d72c30edfd355d838e2663abcb06752635a19f86995c4faece36530f25e", forHTTPHeaderField: "Authorization")
+    request.setValue("Bearer key", forHTTPHeaderField: "Authorization")
     
     let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
         if let error = error {
@@ -30,7 +30,7 @@ func makeAPICall(url: URL, token: String, completion: @escaping (Result<Data, Er
 }
 
 let apiURL = URL(string: "https://api.airtable.com/v0/appb1wPyQ3hv7zl38/Surf%20Destinations")!
-let authToken = "patRBBxmyGCkyUwwN.82110d72c30edfd355d838e2663abcb06752635a19f86995c4faece36530f25e"
+let authToken = "key"
 
 //makeAPICall(url: apiURL, token: authToken) { result in
 //    switch result {
