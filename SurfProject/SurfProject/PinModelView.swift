@@ -33,21 +33,36 @@ struct PinModelView: View {
     
     var body: some View {
         
+    // ----------------> Start effect button Pin
         ZStack {
             ForEach(0..<3) { echo in //loop for echo effect pin
                 Button(action: {
                     isShowingSpotInfos.toggle() //on-off effect sheet
                 })
-                    { //button view
-                        Circle() //central button with icon
-                            .stroke(.gray)
-                            .fill(colorBackPin())
-                            .frame(width: 43)
-                            .overlay(
-                                Image(systemName: "figure.surfing")
-                                    .foregroundColor(.white)
-                                    .imageScale(.large))
-                    } //end of button view
+                { //button view
+                    Circle() //central button with icon
+                        .stroke(.gray)
+                        .fill(colorBackPin())
+                        .frame(width: 43)
+                        .overlay(
+                            Image(systemName: "figure.surfing")
+                                .foregroundColor(.white)
+                                .imageScale(.large))
+                } //end of button view
+                
+                Circle() //echo circles effect
+                    .stroke(Color.gray.opacity(0.5), lineWidth: 1)
+                    .frame(width: 43)
+                    .scaleEffect(scale)
+                    .opacity(opacity)
+                    .animation(
+                        Animation.easeInOut(duration: 3)
+                            .repeatForever(autoreverses: false)
+                            .delay(Double(echo) * 1.1), value: scale
+                    )
+            } //end echo effect loop
+        } //end ZStack
+    //--------------------> End efect button Pin
                 
                     .sheet(isPresented: $isShowingSpotInfos) {
                         let findSpot = Surf.SurfSpotArr[0]
@@ -68,18 +83,6 @@ struct PinModelView: View {
                     .presentationBackground(.thinMaterial)
                 } //end of sheet isShowingSpotInfos
             //}
-                Circle() //echo circles effect
-                    .stroke(Color.gray.opacity(0.5), lineWidth: 1)
-                    .frame(width: 43)
-                    .scaleEffect(scale)
-                    .opacity(opacity)
-                    .animation(
-                        Animation.easeInOut(duration: 3)
-                            .repeatForever(autoreverses: false)
-                            .delay(Double(echo) * 1.1), value: scale
-                    )
-            } //end echo effect loop
-        } //end ZStack
         
         .onAppear { //scale & opacity of echo circle
             scale = 2
@@ -90,5 +93,5 @@ struct PinModelView: View {
 } //end struct
 
 #Preview {
-    PinModelView(risk: "OK")
+    PinModelView(risk: "")
 }
