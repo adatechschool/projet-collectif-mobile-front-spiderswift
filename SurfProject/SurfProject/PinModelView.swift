@@ -9,16 +9,16 @@ import SwiftUI
 import MapKit
 
 struct PinModelView: View {
-    @State private var isShowingSpotInfos = false //action for pin on tap
+    @State private var isShowingSpotInfos = false //save pin action on tap
     let risk: String //risk variable for the data of spot difficulty
     
     //States of echo button spot effect
     @State private var scale: CGFloat = 1.0
     @State private var opacity: Double = 1.0
     
-    var SpotS = SurfSpotIViewList()
+    var Surf = SurfSpotIViewList()
     
-    func colorBackPin() -> Color{
+    func colorBackPin() -> Color {
         switch risk {
         case "OK":
             return .green
@@ -34,24 +34,26 @@ struct PinModelView: View {
     var body: some View {
         
         ZStack {
-            ForEach(0..<3) { i in
+            ForEach(0..<3) { echo in //loop for echo effect pin
                 Button(action: {
-                    isShowingSpotInfos.toggle()
-                }) {
-                    Circle()
-                        .stroke(.gray)
-                        .fill(colorBackPin())
-                        .frame(width: 43)
-                        .overlay(
-                            Image(systemName: "figure.surfing")
-                                .foregroundColor(.white)
-                                .imageScale(.large))
-                }
-                .sheet(isPresented: $isShowingSpotInfos) {
-                    var findSpot = SpotS.SurfSpotArr[0]
-                    //ForEach(SpotS.SurfSpotArr, id: \.id) { info in
+                    isShowingSpotInfos.toggle() //on-off effect sheet
+                })
+                    { //button view
+                        Circle() //central button with icon
+                            .stroke(.gray)
+                            .fill(colorBackPin())
+                            .frame(width: 43)
+                            .overlay(
+                                Image(systemName: "figure.surfing")
+                                    .foregroundColor(.white)
+                                    .imageScale(.large))
+                    } //end of button view
+                
+                    .sheet(isPresented: $isShowingSpotInfos) {
+                        let findSpot = Surf.SurfSpotArr[0]
+                        //ForEach(Surf.SurfSpotArr, id: \.id) { info in
                     
-                    VStack {
+                    VStack { //sheet view info of spot
                         Text(findSpot.name).font(.title).fontWeight(.bold)
                         Text("Latitude: \(findSpot.latitude)")
                         Text("Longitude: \(findSpot.longitude)")
@@ -61,12 +63,12 @@ struct PinModelView: View {
                                 .foregroundColor(colorBackPin())
                                 .fontWeight(.bold)
                         }
-                    }
+                    } //end of view info of spot
                     .presentationDetents([.medium, .large])
                     .presentationBackground(.thinMaterial)
-                }
+                } //end of sheet isShowingSpotInfos
             //}
-                Circle()
+                Circle() //echo circles effect
                     .stroke(Color.gray.opacity(0.5), lineWidth: 1)
                     .frame(width: 43)
                     .scaleEffect(scale)
@@ -74,16 +76,18 @@ struct PinModelView: View {
                     .animation(
                         Animation.easeInOut(duration: 3)
                             .repeatForever(autoreverses: false)
-                            .delay(Double(i) * 1.1), value: scale
+                            .delay(Double(echo) * 1.1), value: scale
                     )
-            }
-        }
-        .onAppear {
+            } //end echo effect loop
+        } //end ZStack
+        
+        .onAppear { //scale & opacity of echo circle
             scale = 2
             opacity = 0
-        }
-    }
-}
+        } //onAppear
+        
+    } //end body
+} //end struct
 
 #Preview {
     PinModelView(risk: "OK")
