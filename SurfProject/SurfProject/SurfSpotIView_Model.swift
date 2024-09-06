@@ -18,7 +18,6 @@ struct SurfSpotIViewList: View {
     
     var body: some View {
         Text("SurfSpot")
-        
         ForEach(SurfSpotArr) { spot in
             Text(spot.name)
         }
