@@ -15,44 +15,25 @@ struct MapView: View {
         span: MKCoordinateSpan(latitudeDelta: 2.1, longitudeDelta: 0.9)
     ))
     
+    var Surf_Spot = SurfSpotIViewList()
+    
     var body: some View {
         Map(position: $cameraPosition) {
-            Annotation("Les Sables d'Olonne", coordinate: CLLocationCoordinate2D(latitude: 46.496687, longitude: -1.784134)) {
-                Circle()
-                    .foregroundColor(.orange)
-                    .frame(width: 43, height: 43)
-                    .overlay {
-                        Image(systemName: "figure.surfing")
-                            .foregroundColor(.white)
-                            .imageScale(.large)
-                    }
+            ForEach(Surf_Spot.SurfSpotArr, id: \.id) { SurfSpot in
+                Marker(SurfSpot.name, coordinate: CLLocationCoordinate2D(latitude: SurfSpot.latitude, longitude: SurfSpot.longitude))
             }
-            Annotation("Saint Jean de Monts", coordinate: CLLocationCoordinate2D(latitude: 46.787306, longitude: -2.071404)) {
-                Circle()
-                    .foregroundColor(.green)
-                    .frame(width: 43, height: 43)
-                    .overlay {
-                        Image(systemName: "figure.surfing")
-                            .foregroundColor(.white)
-                            .imageScale(.large)
-                    }
+        }
+        .onAppear(perform: {
+            Task {
+                await Surf_Spot.SurfSpotArr
             }
-            Annotation("Saint Gilles Croix de Vie", coordinate: CLLocationCoordinate2D(latitude: 46.688300, longitude: -1.938300)) {
-                Circle()
-                    .foregroundColor(.red)
-                    .frame(width: 43, height: 43)
-                    .overlay {
-                        Image(systemName: "figure.surfing")
-                            .foregroundColor(.white)
-                            .imageScale(.large)
-                    }
-                }
-            }
+        })
     
             ZStack {
                 Rectangle()
                     .frame(width: 1000, height: 80)
                     .foregroundColor(.blue)
+                    .padding(-6)
                 HStack {
                     Circle()
                         .frame(width: 43, height: 43)
