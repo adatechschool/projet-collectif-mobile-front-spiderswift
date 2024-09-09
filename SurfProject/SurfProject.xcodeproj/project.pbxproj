@@ -21,7 +21,6 @@
 		BEC691B92C81F6FC00E0B055 /* SpotDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC691B82C81F6FC00E0B055 /* SpotDetailsView.swift */; };
 		BEE3AAC62C89AE7300D811D7 /* Chalkduster.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BEE3AAC52C89AE7300D811D7 /* Chalkduster.ttf */; };
 		E6ED1C632C7C775300678102 /* SurfProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6ED1C622C7C775300678102 /* SurfProjectApp.swift */; };
-		E6ED1C652C7C775300678102 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6ED1C642C7C775300678102 /* ContentView.swift */; };
 		E6ED1C672C7C775300678102 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6ED1C662C7C775300678102 /* Item.swift */; };
 		E6ED1C692C7C775700678102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6ED1C682C7C775700678102 /* Assets.xcassets */; };
 		E6ED1C6C2C7C775700678102 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6ED1C6B2C7C775700678102 /* Preview Assets.xcassets */; };
@@ -65,7 +64,6 @@
 		BEE3AAC52C89AE7300D811D7 /* Chalkduster.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chalkduster.ttf; sourceTree = "<group>"; };
 		E6ED1C5F2C7C775300678102 /* SurfProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurfProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6ED1C622C7C775300678102 /* SurfProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfProjectApp.swift; sourceTree = "<group>"; };
-		E6ED1C642C7C775300678102 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E6ED1C662C7C775300678102 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		E6ED1C682C7C775700678102 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6ED1C6B2C7C775700678102 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
