@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E60D0A752C874C9E002F017A /* PinModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60D0A742C874C9E002F017A /* PinModelView.swift */; };
-		E60D0A792C8896CC002F017A /* ParseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60D0A782C8896CC002F017A /* ParseData.swift */; };
 		E61FDE612C820E780007CC23 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E61FDE602C820E780007CC23 /* CoreLocation.framework */; };
 		E61FDE632C820E830007CC23 /* CoreLocationUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E61FDE622C820E830007CC23 /* CoreLocationUI.framework */; };
 		E61FDE672C820F570007CC23 /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = E61FDE662C820F570007CC23 /* Property List.plist */; };
@@ -42,7 +41,6 @@
 
 /* Begin PBXFileReference section */
 		E60D0A742C874C9E002F017A /* PinModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinModelView.swift; sourceTree = "<group>"; };
-		E60D0A782C8896CC002F017A /* ParseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseData.swift; sourceTree = "<group>"; };
 		E61FDE602C820E780007CC23 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E61FDE622C820E830007CC23 /* CoreLocationUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocationUI.framework; path = System/Library/Frameworks/CoreLocationUI.framework; sourceTree = SDKROOT; };
 		E61FDE662C820F570007CC23 /* Property List.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 			children = (
 				E6ED1C622C7C775300678102 /* SurfProjectApp.swift */,
 				E61FDE682C820FB40007CC23 /* MapView.swift */,
-				E60D0A782C8896CC002F017A /* ParseData.swift */,
 				E68323B62C860060003C66E8 /* SurfSpotIView_Model.swift */,
 				E60D0A742C874C9E002F017A /* PinModelView.swift */,
 				E68323B42C85FC62003C66E8 /* SurfSpotLocation_Model.swift */,
@@ -292,7 +289,6 @@
 				E61FDE692C820FB40007CC23 /* MapView.swift in Sources */,
 				E68323B52C85FC62003C66E8 /* SurfSpotLocation_Model.swift in Sources */,
 				E60D0A752C874C9E002F017A /* PinModelView.swift in Sources */,
-				E60D0A792C8896CC002F017A /* ParseData.swift in Sources */,
 				E6ED1C632C7C775300678102 /* SurfProjectApp.swift in Sources */,
 				E68323B72C860060003C66E8 /* SurfSpotIView_Model.swift in Sources */,
 			);
