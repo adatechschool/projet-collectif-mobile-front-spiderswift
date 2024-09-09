@@ -124,6 +124,7 @@
 			children = (
 				52C3F8A12C870A9200973FBF /* Info.plist */,
 				E6ED1C622C7C775300678102 /* SurfProjectApp.swift */,
+<<<<<<< HEAD
 				E6ED1C642C7C775300678102 /* ContentView.swift */,
 				52C3F8A62C8717D400973FBF /* SupportButton.swift */,
 				52C3F8A82C87350200973FBF /* AnimationTitle.swift */,
