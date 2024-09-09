@@ -5,8 +5,8 @@
       "scale" : "1x"
     },
     {
-<<<<<<< HEAD
       "filename" : "spidermanSurfingios.png",
+<<<<<<< HEAD
 =======
       "filename" : "spidermanSurfing.png",
 <<<<<<< HEAD
@@ -14,6 +14,8 @@
 =======
 >>>>>>> 59d6c0f (rebase continue)
 >>>>>>> 6ac426c (update)
+=======
+>>>>>>> 49bc782 (DS_Store & more)
       "idiom" : "universal",
       "scale" : "2x"
     },
