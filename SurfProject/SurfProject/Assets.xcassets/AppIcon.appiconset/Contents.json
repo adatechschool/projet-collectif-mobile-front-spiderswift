@@ -1,7 +1,14 @@
 {
   "images" : [
     {
+<<<<<<< HEAD
       "filename" : "spidermanSurfingios.png",
+=======
+<<<<<<< HEAD
+=======
+      "filename" : "spidermanSurfingios.png",
+>>>>>>> f195875 (update de la page principale)
+>>>>>>> 59d6c0f (rebase continue)
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"

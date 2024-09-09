@@ -9,7 +9,11 @@
       "filename" : "spidermanSurfingios.png",
 =======
       "filename" : "spidermanSurfing.png",
+<<<<<<< HEAD
 >>>>>>> 1e806e7 (new files added & update pbxproj)
+=======
+>>>>>>> 59d6c0f (rebase continue)
+>>>>>>> 6ac426c (update)
       "idiom" : "universal",
       "scale" : "2x"
     },
