@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ListingJsonView: View {
-<<<<<<< HEAD
+
     @State private var modelJsons: Welcome? = nil
     @State private var isLoading = true
     
@@ -124,16 +124,6 @@ struct ListingJsonView: View {
         
         // Lancer la requête
         task.resume()
-=======
-    
-    let modelJsons: Record = load("Sources.json")
-    
-    var body: some View {
-        List(modelJsons.records, id: \.address) {
-            spot in
-            Text(spot.surfBreak)
-        }
->>>>>>> 1c8fe22 (new files & update)
     }
 }
 
