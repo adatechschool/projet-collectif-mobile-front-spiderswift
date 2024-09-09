@@ -3,6 +3,7 @@
     {
       "filename" : "spiderSurfing2.jpg",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "idiom" : "universal"
 =======
       "idiom" : "universal",
@@ -16,6 +17,9 @@
       "idiom" : "universal",
       "scale" : "3x"
 >>>>>>> 8f62707 (main update with Bernard branch)
+=======
+      "idiom" : "universal"
+>>>>>>> d83d013 (pbxproj update in main)
     }
   ],
   "info" : {
