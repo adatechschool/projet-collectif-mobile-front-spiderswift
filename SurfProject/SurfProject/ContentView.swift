@@ -40,5 +40,8 @@ struct ContentView : View {
 
 #Preview {
     ContentView()
+<<<<<<< HEAD
     
+=======
+>>>>>>> 8f62707 (main update with Bernard branch)
 }
