@@ -5,7 +5,11 @@
       "scale" : "1x"
     },
     {
+<<<<<<< HEAD
       "filename" : "spidermanSurfingios.png",
+=======
+      "filename" : "spidermanSurfing.png",
+>>>>>>> 1e806e7 (new files added & update pbxproj)
       "idiom" : "universal",
       "scale" : "2x"
     },
