@@ -4,4 +4,5 @@
 /SurfProject/SurfProject/.DS_Store
 
 # XCode env
-SurfProject/SurfProject.xcodeproj/project.xcworkspace/xcuserdata/
+/SurfProject/SurfProject/SurfProject.xcodeproj
+
