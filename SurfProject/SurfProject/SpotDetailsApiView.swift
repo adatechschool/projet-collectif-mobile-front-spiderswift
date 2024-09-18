@@ -24,6 +24,7 @@ struct SpotDetailsApiView: View {
                     Image(systemName: "mappin.and.ellipse")
                         .padding(.trailing, 2.0)
                     Text(spot.name)
+                        .font(.custom("Chalkduster", size: 30))
                 }
                 .font(.title)
                 .padding()
@@ -40,25 +41,31 @@ struct SpotDetailsApiView: View {
                     HStack{
                         Image(systemName: "cloud.sun")
                         Text("Météo : ")
-                        Text("Ensoleillée  |  28°C")
+                        Text(spot.weather)
+                        Text(" | ")
+                        Text("\(spot.temp)")
+                        Text(" °C")
                     }
                     .padding()
                     
                     HStack{
                         Image(systemName: "moon.haze")
                         Text("Marée : ")
+                        Text(spot.tide)
                     }
                     .padding()
                     
                     HStack{
                         Image(systemName: "water.waves")
                         Text("Houle : ")
+                        Text(spot.swell_sea)
                     }
                     .padding()
                     
                     HStack{
                         Image(systemName: "wind")
                         Text("Vent : ")
+                        Text(spot.wind)
                     }
                     .padding()
                 }
@@ -79,6 +86,12 @@ struct SpotDetailsApiView: View {
         city: "Etel",
         latitude: 47.651077,
         longitude: -3.225147,
-        risk: "ok",
+        risk: "medium",
+        weather: "Nuageux",
+        temp: 17,
+        tide: "BM: 08h10 - HM: 14H07",
+        coeff: 87,
+        swell_sea: "1.5-2m",
+        wind: "Ouest 12 km/h",
         description: "Un spot de surf connu pour ses courants puissants et ses vagues variées, situé à l'embouchure de la Ria d'Etel."))
 }

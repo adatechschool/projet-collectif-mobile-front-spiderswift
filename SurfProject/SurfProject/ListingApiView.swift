@@ -22,41 +22,16 @@ struct ListingApiView: View {
                 List(surfSpots, id: \.name) { spot in
                     NavigationLink(destination: SpotDetailsApiView(spot: spot)) {
                         HStack {
-                            // Afficher l'image si disponible
-                            if let url = URL(string: spot.image) {
-                                AsyncImage(url: url) { phase in
-                                    switch phase {
-                                    case .empty:
-                                        ProgressView()
-                                            .frame(width: 70, height: 70)
-                                    case .success(let image):
-                                        image
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fill)
-                                            .frame(width: 70, height: 70)
-                                            .clipShape(Circle())
-                                    case .failure:
-                                        Image(systemName: "photo")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                            .frame(width: 70, height: 70)
-                                    @unknown default:
-                                        EmptyView()
-                                    }
-                                }
-                            } else {
-                                // Image de remplacement si aucune photo
-                                Image(systemName: "photo")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 70, height: 70)
-                                    .clipShape(Circle())
-                            }
+                            Image(spot.image)
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 70, height: 70)
+                                .clipShape(Circle())
                             
                             // Afficher les informations du surf spot
                             VStack(alignment: .leading) {
                                 Text(spot.name)
-                                    .font(.headline)
+                                    .font(.custom("Chalkduster", size: 18))
                                 
                                 Text(spot.city)
                                     .font(.subheadline)
@@ -66,7 +41,7 @@ struct ListingApiView: View {
                         .padding(.vertical, 5)
                     }
                 }
-                 .navigationTitle("Surf Spots")
+                 .navigationTitle("Spots de Surf")
              }
         } detail: {
                 if let selectedSpot = selectedSpot {

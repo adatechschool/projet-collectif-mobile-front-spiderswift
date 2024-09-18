@@ -15,5 +15,11 @@ struct SurfSpot : Identifiable, Decodable {
     let latitude: Double
     let longitude: Double
     let risk: String
+    let weather: String
+    let temp: Int
+    let tide: String
+    let coeff: Int
+    let swell_sea: String
+    let wind: String
     let description: String
 }
