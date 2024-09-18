@@ -29,9 +29,9 @@ struct ContentView : View {
                 //Creation buttons
                 
                 HStack {
-                    SupportButton(text: "Autour de moi", icone: "compass.drawing")
-                    SupportButton(text: "Autour d'un lieu", icone: "figure.surfing")
-                    SupportButton(text: "Menu",icone: "list.star")
+                    SupportButton2(text: "autour de moi", icone: "compass.drawing")
+                    SupportButton(text: "Spots de surf", icone: "figure.surfing")
+                    SupportButton3(text: "Menu",icone: "list.star")
                 }
             }
         }
