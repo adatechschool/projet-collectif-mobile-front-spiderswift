@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SpotDetailsApiView: View {
     
-    let spot: SurfSpot
+    let spot: SurfSpotapi
     
     var body: some View {
         
@@ -79,7 +79,7 @@ struct SpotDetailsApiView: View {
 }
 
 #Preview {
-    SpotDetailsApiView(spot: SurfSpot(
+    SpotDetailsApiView(spot: SurfSpotapi(
         id: 3,
         name: "Barre d'Etel",
         image: "barre_detel",

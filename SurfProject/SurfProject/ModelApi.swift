@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SurfSpot : Identifiable, Decodable {
+struct SurfSpotapi : Identifiable, Decodable {
     var id: Int
     let name: String
     let image: String

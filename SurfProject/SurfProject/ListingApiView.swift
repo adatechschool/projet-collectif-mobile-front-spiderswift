@@ -9,17 +9,17 @@ import SwiftUI
 
 struct ListingApiView: View {
     @State private var isLoading = true
-    @State private var surfSpots: [SurfSpot] = []
-    @State private var selectedSpot: SurfSpot?
+    @State private var surfSpotapis: [SurfSpotapi] = []
+    @State private var selectedSpot: SurfSpotapi?
 
     var body: some View {
         NavigationSplitView {
             if isLoading {
                 ProgressView("Loading...")
-            } else if surfSpots.isEmpty {
+            } else if surfSpotapis.isEmpty {
                 Text("Aucune donnée disponible")
             } else {
-                List(surfSpots, id: \.name) { spot in
+                List(surfSpotapis, id: \.name) { spot in
                     NavigationLink(destination: SpotDetailsApiView(spot: spot)) {
                         HStack {
                             Image(spot.image)
@@ -86,9 +86,9 @@ struct ListingApiView: View {
             // Traiter les données reçues
             if let data = data {
                 do {
-                    let jsonResponse = try JSONDecoder().decode([SurfSpot].self, from: data)
+                    let jsonResponse = try JSONDecoder().decode([SurfSpotapi].self, from: data)
                     DispatchQueue.main.async {
-                        self.surfSpots = jsonResponse
+                        self.surfSpotapis = jsonResponse
                         self.isLoading = false
                     }
                 } catch {
