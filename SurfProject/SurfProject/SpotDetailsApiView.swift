@@ -1,21 +1,21 @@
 //
-//  SpotDetailsView.swift
+//  SpotDetailsApiView.swift
 //  SurfProject
 //
-//  Created by Maud Gauthier on 30/08/2024.
+//  Created by Maud Gauthier on 18/09/2024.
 //
 
 import SwiftUI
 
-struct SpotDetailsView: View {
+struct SpotDetailsApiView: View {
     
-    let spot: Spot
+    let spot: SurfSpotapi
     
     var body: some View {
         
         GeometryReader { geometry in
             VStack {
-                Image(spot.imageName)
+                Image(spot.image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: geometry.size.width)
@@ -24,6 +24,7 @@ struct SpotDetailsView: View {
                     Image(systemName: "mappin.and.ellipse")
                         .padding(.trailing, 2.0)
                     Text(spot.name)
+                        .font(.custom("Chalkduster", size: 30))
                 }
                 .font(.title)
                 .padding()
@@ -40,37 +41,31 @@ struct SpotDetailsView: View {
                     HStack{
                         Image(systemName: "cloud.sun")
                         Text("Météo : ")
-                        //Text("Ensoleillée  |  28°C")
-                        ForEach(spot.weather, id: \.self) { weather in
-                            Text(weather)
-                        }
+                        Text(spot.weather)
+                        Text(" | ")
+                        Text("\(spot.temp)")
+                        Text(" °C")
                     }
                     .padding()
                     
                     HStack{
                         Image(systemName: "moon.haze")
                         Text("Marée : ")
-                        ForEach(spot.tide, id: \.self) {
-                            tide in
-                            Text(tide)
-                        }
+                        Text(spot.tide)
                     }
                     .padding()
                     
                     HStack{
                         Image(systemName: "water.waves")
                         Text("Houle : ")
-                        Text(spot.swellSea)
+                        Text(spot.swell_sea)
                     }
                     .padding()
                     
                     HStack{
                         Image(systemName: "wind")
                         Text("Vent : ")
-                        ForEach(spot.wind, id: \.self) {
-                            wind in
-                            Text(wind)
-                        }
+                        Text(spot.wind)
                     }
                     .padding()
                 }
@@ -84,5 +79,19 @@ struct SpotDetailsView: View {
 }
 
 #Preview {
-    SpotDetailsView(spot: Spot(name: "Audierne", imageName: "audierne", weather: ["Ensoleillé", "17°C"], tide: ["Basse 5h03", "Haute 12H01"], swellSea: "1m-2m", wind: ["Nord-Ouest 15 km/h", "Ouest 10 km/h"], description: "Audierne est un spot idéal pour les surfeurs de tous niveaux, avec des vagues régulières et une belle plage."))
+    SpotDetailsApiView(spot: SurfSpotapi(
+        id: 3,
+        name: "Barre d'Etel",
+        image: "barre_detel",
+        city: "Etel",
+        latitude: 47.651077,
+        longitude: -3.225147,
+        risk: "medium",
+        weather: "Nuageux",
+        temp: 17,
+        tide: "BM: 08h10 - HM: 14H07",
+        coeff: 87,
+        swell_sea: "1.5-2m",
+        wind: "Ouest 12 km/h",
+        description: "Un spot de surf connu pour ses courants puissants et ses vagues variées, situé à l'embouchure de la Ria d'Etel."))
 }

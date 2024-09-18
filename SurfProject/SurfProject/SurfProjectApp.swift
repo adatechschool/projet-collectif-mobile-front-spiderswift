@@ -23,7 +23,7 @@ struct SurfProjectApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ListingJsonView()
+            ContentView()
         }
         .modelContainer(sharedModelContainer)
     }
