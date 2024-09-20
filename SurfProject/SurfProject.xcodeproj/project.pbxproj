@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		52C3F8A72C8717D500973FBF /* SupportButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3F8A62C8717D400973FBF /* SupportButton.swift */; };
+		52C3F8A72C8717D500973FBF /* SupportButton2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3F8A62C8717D400973FBF /* SupportButton2.swift */; };
 		BE12D0DC2C870C790028569F /* SpotInterpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE12D0DB2C870C790028569F /* SpotInterpreter.swift */; };
 		BE4C2C952C9AC520009CC08A /* SpotDetailsApiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4C2C942C9AC520009CC08A /* SpotDetailsApiView.swift */; };
+		BE81CF262C9C0D6A004FF0D1 /* SupportButton1.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE81CF252C9C0D6A004FF0D1 /* SupportButton1.swift */; };
+		BE81CF282C9C0DFA004FF0D1 /* SupportButton3.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE81CF272C9C0DFA004FF0D1 /* SupportButton3.swift */; };
+		BE81CF2A2C9C0EAF004FF0D1 /* AnimationWinPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE81CF292C9C0EAF004FF0D1 /* AnimationWinPView.swift */; };
+		BE81CF2C2C9C10FE004FF0D1 /* imageWinP.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE81CF2B2C9C10FE004FF0D1 /* imageWinP.swift */; };
 		BEA3584C2C99C23E004B2B6C /* ListingApiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA3584B2C99C23E004B2B6C /* ListingApiView.swift */; };
 		BEA3584E2C99C367004B2B6C /* ModelApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA3584D2C99C367004B2B6C /* ModelApi.swift */; };
 		BEE3AAC62C89AE7300D811D7 /* Chalkduster.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BEE3AAC52C89AE7300D811D7 /* Chalkduster.ttf */; };
@@ -48,9 +52,13 @@
 
 /* Begin PBXFileReference section */
 		52C3F8A12C870A9200973FBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		52C3F8A62C8717D400973FBF /* SupportButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportButton.swift; sourceTree = "<group>"; };
+		52C3F8A62C8717D400973FBF /* SupportButton2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportButton2.swift; sourceTree = "<group>"; };
 		BE12D0DB2C870C790028569F /* SpotInterpreter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotInterpreter.swift; sourceTree = "<group>"; };
 		BE4C2C942C9AC520009CC08A /* SpotDetailsApiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotDetailsApiView.swift; sourceTree = "<group>"; };
+		BE81CF252C9C0D6A004FF0D1 /* SupportButton1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportButton1.swift; sourceTree = "<group>"; };
+		BE81CF272C9C0DFA004FF0D1 /* SupportButton3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportButton3.swift; sourceTree = "<group>"; };
+		BE81CF292C9C0EAF004FF0D1 /* AnimationWinPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationWinPView.swift; sourceTree = "<group>"; };
+		BE81CF2B2C9C10FE004FF0D1 /* imageWinP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageWinP.swift; sourceTree = "<group>"; };
 		BEA3584B2C99C23E004B2B6C /* ListingApiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingApiView.swift; sourceTree = "<group>"; };
 		BEA3584D2C99C367004B2B6C /* ModelApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelApi.swift; sourceTree = "<group>"; };
 		BEE3AAC52C89AE7300D811D7 /* Chalkduster.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chalkduster.ttf; sourceTree = "<group>"; };
@@ -102,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				E6327E402C8F052800D79FE7 /* AnimationTitle.swift */,
-				E6327E432C8F052800D79FE7 /* ContentView.swift */,
 				E6327E472C8F052800D79FE7 /* MapView.swift */,
 				E6327E4A2C8F052800D79FE7 /* PinModelView.swift */,
 				E6327E4B2C8F052800D79FE7 /* Property List.plist */,
@@ -135,9 +142,14 @@
 		E6ED1C612C7C775300678102 /* SurfProject */ = {
 			isa = PBXGroup;
 			children = (
+				E6327E432C8F052800D79FE7 /* ContentView.swift */,
 				52C3F8A12C870A9200973FBF /* Info.plist */,
 				E6ED1C622C7C775300678102 /* SurfProjectApp.swift */,
-				52C3F8A62C8717D400973FBF /* SupportButton.swift */,
+				BE81CF252C9C0D6A004FF0D1 /* SupportButton1.swift */,
+				52C3F8A62C8717D400973FBF /* SupportButton2.swift */,
+				BE81CF272C9C0DFA004FF0D1 /* SupportButton3.swift */,
+				BE81CF292C9C0EAF004FF0D1 /* AnimationWinPView.swift */,
+				BE81CF2B2C9C10FE004FF0D1 /* imageWinP.swift */,
 				BEE3AAC52C89AE7300D811D7 /* Chalkduster.ttf */,
 				BE12D0DB2C870C790028569F /* SpotInterpreter.swift */,
 				E6327E682C8F055F00D79FE7 /* Item.swift */,
@@ -312,15 +324,19 @@
 				E6327E582C8F052800D79FE7 /* ContentView.swift in Sources */,
 				E6327E692C8F055F00D79FE7 /* Item.swift in Sources */,
 				E6327E552C8F052800D79FE7 /* AnimationTitle.swift in Sources */,
+				BE81CF262C9C0D6A004FF0D1 /* SupportButton1.swift in Sources */,
+				BE81CF2C2C9C10FE004FF0D1 /* imageWinP.swift in Sources */,
 				E6327E5C2C8F052800D79FE7 /* MapView.swift in Sources */,
 				BE12D0DC2C870C790028569F /* SpotInterpreter.swift in Sources */,
 				E6327E672C8F052800D79FE7 /* SurfSpotLocation_Model.swift in Sources */,
+				BE81CF282C9C0DFA004FF0D1 /* SupportButton3.swift in Sources */,
 				BE4C2C952C9AC520009CC08A /* SpotDetailsApiView.swift in Sources */,
 				E6327E5F2C8F052800D79FE7 /* PinModelView.swift in Sources */,
+				BE81CF2A2C9C0EAF004FF0D1 /* AnimationWinPView.swift in Sources */,
 				E6ED1C632C7C775300678102 /* SurfProjectApp.swift in Sources */,
 				E6327E662C8F052800D79FE7 /* SurfSpotIView_Model.swift in Sources */,
 				BEA3584C2C99C23E004B2B6C /* ListingApiView.swift in Sources */,
-				52C3F8A72C8717D500973FBF /* SupportButton.swift in Sources */,
+				52C3F8A72C8717D500973FBF /* SupportButton2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,8 +1,8 @@
 //
-//  SupportButton3.swift
+//  SupportButton5.swift
 //  SurfProject
 //
-//  Created by Cindy Lecat on 18/09/2024.
+//  Created by Maud Gauthier on 19/09/2024.
 //
 
 import SwiftUI
@@ -18,7 +18,7 @@ struct SupportButton3: View {
                 .foregroundColor(Color.yellow)
             
             NavigationLink(text) {
-                InProgressView()
+                imageWinP()
             }
             .font(.custom("Chalkduster", size: 14))
             .foregroundColor(.white)
@@ -39,8 +39,6 @@ struct SupportButton3: View {
                 .navigationTitle("Detail")
         }
     }
-    
-
 
 #Preview {
     SupportButton3(text: "Menu",icone: "list.star")

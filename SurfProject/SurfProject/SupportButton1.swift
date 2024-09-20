@@ -1,13 +1,13 @@
 //
-//  SupportButton.swift
+//  SupportButton4.swift
 //  SurfProject
 //
-//  Created by Cindy Lecat on 03/09/2024.
+//  Created by Maud Gauthier on 19/09/2024.
 //
 
 import SwiftUI
 
-struct SupportButton: View {
+struct SupportButton1: View {
     var text: String
     var icone: String
     
@@ -17,7 +17,7 @@ struct SupportButton: View {
                 .foregroundColor(Color.yellow)
             
             NavigationLink(text) {
-                APIcall()
+                MapView()
             }
             .font(.custom("Chalkduster", size: 14))
             .foregroundColor(.white)
@@ -29,14 +29,14 @@ struct SupportButton: View {
     }
 }
 
-struct DetailView: View {
+struct DetailView2: View {
     var body: some View {
-        Text("Detail View")
+        Text("Map")
             .font(.largeTitle)
             .navigationTitle("Detail")
     }
 }
 
 #Preview {
-    SupportButton(text: "autour d'un lieu", icone: "figure.surfing")
+    SupportButton1(text: "Autour de moi", icone: "compass.drawing")
 }

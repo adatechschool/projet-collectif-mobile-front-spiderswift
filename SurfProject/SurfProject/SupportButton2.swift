@@ -1,8 +1,8 @@
 //
-//  SupportButton2.swift
+//  SupportButton.swift
 //  SurfProject
 //
-//  Created by Cindy Lecat on 18/09/2024.
+//  Created by Cindy Lecat on 03/09/2024.
 //
 
 import SwiftUI
@@ -17,7 +17,7 @@ struct SupportButton2: View {
                 .foregroundColor(Color.yellow)
             
             NavigationLink(text) {
-                MapView()
+                ListingApiView()
             }
             .font(.custom("Chalkduster", size: 14))
             .foregroundColor(.white)
@@ -29,14 +29,14 @@ struct SupportButton2: View {
     }
 }
 
-struct DetailView2: View {
+struct DetailView: View {
     var body: some View {
-        Text("Map")
+        Text("Detail View")
             .font(.largeTitle)
             .navigationTitle("Detail")
     }
 }
 
 #Preview {
-    SupportButton2(text: "autour de moi", icone: "compass.drawing")
+    SupportButton2(text: "Spots de Surf", icone: "figure.surfing")
 }

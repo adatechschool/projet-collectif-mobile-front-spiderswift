@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct ListingApiView: View {
-    @State private var isLoading = true
+    //@State private var isLoading = true
     @State private var surfSpotapis: [SurfSpotapi] = []
     @State private var selectedSpot: SurfSpotapi?
 
     var body: some View {
-        NavigationSplitView {
-            if isLoading {
-                ProgressView("Loading...")
-            } else if surfSpotapis.isEmpty {
-                Text("Aucune donnée disponible")
-            } else {
+//        NavigationSplitView {
+//            if isLoading {
+//                ProgressView("Loading...")
+//            } else if surfSpotapis.isEmpty {
+//                Text("Aucune donnée disponible")
+//            } else {
                 List(surfSpotapis, id: \.name) { spot in
                     NavigationLink(destination: SpotDetailsApiView(spot: spot)) {
                         HStack {
@@ -42,16 +42,16 @@ struct ListingApiView: View {
                     }
                 }
                  .navigationTitle("Spots de Surf")
-             }
-        } detail: {
-                if let selectedSpot = selectedSpot {
-                    SpotDetailsApiView(spot: selectedSpot)
-                } else {
-                    Text("Select a surf spot")
-                        .font(.title)
-                        .foregroundColor(.secondary)
-                }
-        }
+         //    }
+//        } detail: {
+//                if let selectedSpot = selectedSpot {
+//                    SpotDetailsApiView(spot: selectedSpot)
+//                } else {
+//                    Text("Select a surf spot")
+//                        .font(.title)
+//                        .foregroundColor(.secondary)
+//                }
+//        }
         .onAppear {
             fetchSurfSpots()
         }
@@ -89,7 +89,7 @@ struct ListingApiView: View {
                     let jsonResponse = try JSONDecoder().decode([SurfSpotapi].self, from: data)
                     DispatchQueue.main.async {
                         self.surfSpotapis = jsonResponse
-                        self.isLoading = false
+     //                   self.isLoading = false
                     }
                 } catch {
                     print("Erreur lors du décodage JSON: \(error.localizedDescription)")

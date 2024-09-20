@@ -30,9 +30,10 @@ struct ContentView : View {
                 
                 HStack {
 
-                    SupportButton(text: "Autour de moi", icone: "compass.drawing")
-                    SupportButton(text: "Spots de Surf", icone: "figure.surfing")
-                    SupportButton(text: "Menu",icone: "list.star")
+                    SupportButton1(text: "Autour de moi", icone: "compass.drawing")
+                    SupportButton2(text: "Spots de Surf",icone: "list.star")
+                    SupportButton3(text: "Menu",icone: "list.star")
+                    
                 }
             }
         }

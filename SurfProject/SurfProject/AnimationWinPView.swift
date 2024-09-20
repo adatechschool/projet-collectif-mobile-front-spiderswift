@@ -1,13 +1,13 @@
 //
-//  AnimationUsView.swift
+//  AnimationWinPView.swift
 //  SurfProject
 //
-//  Created by Cindy Lecat on 18/09/2024.
+//  Created by Maud Gauthier on 19/09/2024.
 //
 
 import SwiftUI
 
-struct AnimationUsView: View {
+struct AnimationWinPView: View {
     @State private var moveGradient = true
     
     var body: some View {
@@ -36,5 +36,5 @@ struct AnimationUsView: View {
 }
 
 #Preview {
-    AnimationUsView()
+    imageWinP()
 }
