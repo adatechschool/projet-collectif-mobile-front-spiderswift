@@ -31,7 +31,6 @@ struct AnimationTitle: View {
             .onAppear {
                 self.moveGradient.toggle()
             }
-            
     }
 }
 

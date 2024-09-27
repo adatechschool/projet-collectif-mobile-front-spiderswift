@@ -8,7 +8,7 @@
 import SwiftUI
 import MapKit
 
-struct PinModelView: View {
+struct PinView: View {
     @State private var scale: CGFloat = 1.0 //States of echo button spot effect
     @State private var opacity: Double = 1.0 //States of echo button spot effect
     
@@ -16,11 +16,11 @@ struct PinModelView: View {
     
     func colorBackPin() -> Color {
         switch risk {
-        case "OK":
+        case "ok":
             return .green
-        case "Medium":
+        case "medium":
             return .orange
-        case "Dangerous":
+        case "dangerous":
             return .red
         default:
             return .blue
@@ -63,5 +63,5 @@ struct PinModelView: View {
 } //end struct
 
 #Preview {
-    PinModelView(risk: "OK")
+    PinView(risk: "OK")
 }

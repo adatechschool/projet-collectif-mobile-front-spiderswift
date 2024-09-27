@@ -7,12 +7,11 @@
 
 import SwiftUI
 
-struct SpotDetailsApiView: View {
+struct DetailsSpotsView: View {
     
-    let spot: SurfSpotapi
-    
+    let spot: SurfSpotDetail
+
     var body: some View {
-        
         GeometryReader { geometry in
             VStack {
                 Image(spot.image)
@@ -20,7 +19,7 @@ struct SpotDetailsApiView: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(width: geometry.size.width)
                 
-                HStack{
+                HStack {
                     Image(systemName: "mappin.and.ellipse")
                         .padding(.trailing, 2.0)
                     Text(spot.name)
@@ -32,37 +31,34 @@ struct SpotDetailsApiView: View {
                 Text(spot.description)
                     .padding()
                 
-                VStack(alignment: .leading){
-                    
+                VStack(alignment: .leading) {
                     Text("Conditions de Surf aujourd'hui :")
                         .padding()
                         .bold()
                     
-                    HStack{
+                    HStack {
                         Image(systemName: "cloud.sun")
                         Text("Météo : ")
                         Text(spot.weather)
-                        Text(" | ")
-                        Text("\(spot.temp)")
-                        Text(" °C")
+                        Text(" | \(spot.temp) °C")
                     }
                     .padding()
                     
-                    HStack{
+                    HStack {
                         Image(systemName: "moon.haze")
                         Text("Marée : ")
                         Text(spot.tide)
                     }
                     .padding()
                     
-                    HStack{
+                    HStack {
                         Image(systemName: "water.waves")
                         Text("Houle : ")
                         Text(spot.swell_sea)
                     }
                     .padding()
                     
-                    HStack{
+                    HStack {
                         Image(systemName: "wind")
                         Text("Vent : ")
                         Text(spot.wind)
@@ -70,16 +66,16 @@ struct SpotDetailsApiView: View {
                     .padding()
                 }
                 .padding(.vertical, 15.0)
-                .background(RoundedRectangle(cornerRadius: 10).fill(.beige)
-                    .stroke(.black, lineWidth: 2))
-                
+                .background(RoundedRectangle(cornerRadius: 10).fill(Color.beige)
+                    .stroke(Color.black, lineWidth: 2))
             }
         }
+        .navigationTitle(spot.name)
     }
 }
 
 #Preview {
-    SpotDetailsApiView(spot: SurfSpotapi(
+    DetailsSpotsView(spot: SurfSpotDetail(
         id: 3,
         name: "Barre d'Etel",
         image: "barre_detel",

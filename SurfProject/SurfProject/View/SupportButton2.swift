@@ -1,16 +1,15 @@
 //
-//  SupportButton5.swift
+//  SupportButton.swift
 //  SurfProject
 //
-//  Created by Maud Gauthier on 19/09/2024.
+//  Created by Cindy Lecat on 03/09/2024.
 //
 
 import SwiftUI
 
-struct SupportButton3: View {
+struct SupportButton2: View {
     var text: String
     var icone: String
-    
     
     var body: some View {
         Button(action: {}){
@@ -18,7 +17,7 @@ struct SupportButton3: View {
                 .foregroundColor(Color.yellow)
             
             NavigationLink(text) {
-                imageWinP()
+                ListingSpotsView()
             }
             .font(.custom("Chalkduster", size: 14))
             .foregroundColor(.white)
@@ -29,17 +28,15 @@ struct SupportButton3: View {
         .shadow(color: .gray, radius: 20.0, x: 20.0, y: 10.0)
     }
 }
-        
-        
-    
-    struct DetailView3: View {
-        var body: some View {
-            Text("Work in Progress")
-                .font(.largeTitle)
-                .navigationTitle("Detail")
-        }
+
+struct DetailView: View {
+    var body: some View {
+        Text("Detail View")
+            .font(.largeTitle)
+            .navigationTitle("Detail")
     }
+}
 
 #Preview {
-    SupportButton3(text: "Menu",icone: "list.star")
+    SupportButton2(text: "Spots de Surf", icone: "figure.surfing")
 }

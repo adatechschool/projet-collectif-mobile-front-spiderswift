@@ -15,21 +15,21 @@ struct MapView: View {
         span: MKCoordinateSpan(latitudeDelta: 2.1, longitudeDelta: 0.9)
     ))
     @State var isShowingSpotInfos = false //save pin action on tap
-    @State var selectedSpot: SurfSpot? //optional type -> can do a [SurfSpot] type
+    @State private var selectedSpot: SurfSpotDetail? //optional type -> can do a [SurfSpot] type
     
-    var Surf_Spot = SurfSpotIViewList()
-    var PinModel = PinModelView(risk: "")
+    @ObservedObject var viewModel = SurfSpotDetailViewModel()
+    var PinModel = PinView(risk: "")
     
     var body: some View {
         
         Map(position: $cameraPosition) {
-            ForEach(Surf_Spot.SurfSpotArr, id: \.id) { SurfSpot in
-                Annotation(SurfSpot.name, coordinate: CLLocationCoordinate2D(latitude: SurfSpot.latitude, longitude: SurfSpot.longitude)) {
-                    Button(action: {
+            ForEach(viewModel.surfSpotDetails, id: \.id) { spot in
+                Annotation(spot.name, coordinate: CLLocationCoordinate2D(latitude: spot.latitude, longitude: spot.longitude)) {
+                        Button(action: {
                         isShowingSpotInfos.toggle() //on-off effect sheet
-                        selectedSpot = SurfSpot //simple spot selector
+                        selectedSpot = spot //simple spot selector
                     }) {
-                        PinModelView(risk: SurfSpot.risk)
+                        PinView(risk: spot.risk)
                     } //end of button action
                 } //end of Annotation
             } //end of loop
@@ -39,10 +39,11 @@ struct MapView: View {
             if let spot = selectedSpot {
                 VStack { //sheet view info of spot
                     Text(spot.name).font(.title).fontWeight(.bold)
+                    Text("Ville: \(spot.city)")
                     Text("Latitude: \(spot.latitude)")
                     Text("Longitude: \(spot.longitude)")
                     HStack {
-                        Text("Status:")
+                        Text("Difficulté:")
                         Text(spot.risk)
                             .foregroundColor(PinModel.colorBackPin())
                             .   fontWeight(.bold)
